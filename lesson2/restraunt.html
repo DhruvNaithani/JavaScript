@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>MENU</h4>
+    <button onclick="console.log(`The menu is:\n${menu}`)">Show The Menu</button>
+    <h4>CALCULATOR</h4>
+    <button onclick="console.log(c+t+b+s)">Total before tax</button>
+    <button onclick="console.log(tax)">Tax</button>
+    <button onclick="console.log(tax+c+t+b+s)">Total after tax</button>
+    <script>
+        let c=5,t=4,b=3,s=9;
+        let tax=(0.1*(c+t+b+s));
+        let menu=`
+        Coffee:$${c}\n
+        Tea:$${t}\n
+        Bagels:$${b}\n
+        Soup:$${s}\n
+        `;
+    </script>
+</body>
+</html>
