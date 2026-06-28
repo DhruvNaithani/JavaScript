@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document object model</title>
+</head>
+<body>
+    <button>Hello</button>
+    <button class="btn">hello2</button>
+    <P>world</P>
+    <script>
+        console.log(document.querySelector('button').innerHTML='JavaScript');
+        console.log(document.querySelector('p').innerHTML='change the prooperty');
+        let btn=document.querySelector('.btn').innerHTML='javascript2';
+        console.log(btn);
+        // document.body.innerHTML='hello';
+        // document.title='DOM';
+        // console.log(document.body);
+        // console.log(typeof document.body);
+        // document.body.innerHTML='<button>hello world</button>'
+    </script>
+</body>
+</html>
