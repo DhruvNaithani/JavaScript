@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping calculator</title>
+    <style>
+        body{
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        p{
+            color:rgb(178, 66, 66)
+        }
+        .result{
+            color:rgba(6, 129, 6, 0.826)
+        }
+        input{
+            padding:10px;
+        }
+        button{
+            padding:10px 12px;
+            border:1px solid green;
+            background-color:rgb(5, 131, 5);
+            color:white;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <h3>Amazon Shipping Calculate</h3>
+    <p>Orders under $40 = +$10 shipping</p>
+    <p>Orders over $40 = FREE shipping</p>
+    <input type="number" placeholder="enter" onkeydown="
+    if(event.key==='Enter'){
+        calculate();
+    }
+    ">
+    <button onclick="calculate()">Calculate</button>
+    <P class="result"></P>
+    <script>
+        function calculate(){
+            let inp=parseInt(document.querySelector('input').value);
+            if(inp>40){
+                document.querySelector('.result').innerHTML=`$${inp}`;
+           }
+           else{
+                document.querySelector('.result').innerHTML=`$${inp+10}`;
+           }
+        };
+    </script>
+</body>
+</html>

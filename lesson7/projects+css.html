@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+    <style>
+        .subscribe-btn{
+            border:none;
+            background-color: black;
+            color:white;
+            padding:10px 13px;
+            font-size:12px;
+            border-radius: 28px;
+            cursor: pointer;
+        }
+        .is-subscribe{
+            background-color:rgba(223, 223, 223, 0.96) ;
+            color:black;
+        }
+        p{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight:bolder;
+        }
+    </style>
+</head>
+<body>
+    <p>YouTube Subscribe Button</p>
+    <button onclick="subscribe2()" class="subscribe-btn">Subscribe</button>
+    <script>
+          let c=
+          {
+            count:1
+        };
+        function subscribe(){
+            
+            if(c.count%2!=0){
+                document.querySelector('button').innerHTML='Subscribed';
+            }
+            else{
+                document.querySelector('button').innerHTML='Subscribe';
+            }
+            console.log(c.count);
+            c.count++;
+        };
+        function subscribe2(){
+            let s=document.querySelector('button').innerHTML;
+            if(s==='Subscribe'){
+                document.querySelector('button').innerHTML='Subscribed';
+                document.querySelector('button').classList.add('is-subscribe');
+            }
+            else{
+               document.querySelector('button').innerHTML='Subscribe';
+               document.querySelector('button').classList.remove('is-subscribe');
+            }
+        }
+    </script>
+</body>
+</html>
